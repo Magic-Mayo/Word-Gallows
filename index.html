@@ -5,25 +5,29 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
         <link href="assets/css/style.css" rel="stylesheet">
-        <script src="assets/javascript/game.js"></script>
         <link href="assets/images/icon.ico" rel="shortcut icon">
+        <script src="assets/javascript/game.js"></script>
 
-        <title>Word Gallows</title>
+        <title>Ye Olde Word Gallows</title>
     </head>
 
-    <body>
+    <body onload="yourName()">
         <main
             class="container">
 
             <!-- Title of the game -->
-            <header id="title">Ye Olde Word Gallows</header>
+            <header id="title">Word Gallows</header>
 
             <!-- Guess countdown -->
             <div class="row">
                 <div class="guess">
-                    <p>Guesses before <div class="name"></div> <br> is hung by the neck:</p>
+                    <p>Guesses before <div id="name"></div> <br> is hanged by the neck:</p>
                 </div>
+
+                <div class="row countdown"></div>
                 <div class="col guess">
+                    <p>Fallacious Calculations:</p>
+                    <p class=""></p>
 
                     <div class="row">
 
