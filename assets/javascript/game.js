@@ -4,6 +4,8 @@ confirm("Doest thou wish to proceed?")
 
 if (confirm) {
     const name = prompt("T'is thy name?");
+
+    // Function to add name to body of HTML after prompted
     function yourName() {
         const userName = document.getElementById("name");
         const writeName = document.createTextNode(name);
@@ -13,8 +15,9 @@ if (confirm) {
     
 }
 
-
 else {
 
 
 }
+
+onkeypress.
