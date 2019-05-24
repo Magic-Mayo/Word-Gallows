@@ -22,9 +22,8 @@ body {
 }
 #body {
     background-image: url("../images/knight.jpg");
-    background-size: auto;
-    width: 100vw;
-    height: auto;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 #title {

@@ -17,14 +17,16 @@ if (warn) {
     window.addEventListener('DOMContentLoaded', yourName)
 }
 
-// If user chooses not to play they will be given this message and sent to a separate page
+// If user chooses not to play they will be given this message and display a different background
 else if (!warn){
     alert("Thou hast chosen to be but a coward.  But if nothing else thy neck shan't be broken this day.");
     console.log(false);
 
     function cowardBG(cowardImage) {
-        document.getElementById("body").className = "bg" + cowardImage;
+        document.getElementsByClassName("para title col guess").className = "bg" + cowardImage;
+        const container = document.getElementByClassName("container");
+        container.style.display = "none";
     }
-    
+
 
 }
