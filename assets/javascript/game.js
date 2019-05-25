@@ -18,7 +18,7 @@ if (warn) {
 }
 
 // If user chooses not to play they will be given this message and display a different background
-else {
+else if (!warn) {
     alert("Thou hast chosen to be but a coward.  But if nothing else thy neck shan't be broken this day.");
 
     function cowardBG(cowardImage) {
