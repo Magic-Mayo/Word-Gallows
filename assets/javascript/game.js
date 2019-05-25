@@ -13,18 +13,17 @@ if (warn) {
         console.log(writeName);
     }
 
-    // Executes function after document is loaded
+    // Executes yourName function after document is loaded
     window.addEventListener('DOMContentLoaded', yourName)
 }
 
 // If user chooses not to play they will be given this message and display a different background
-else if (!warn){
+else {
     alert("Thou hast chosen to be but a coward.  But if nothing else thy neck shan't be broken this day.");
-    console.log(false);
 
     function cowardBG(cowardImage) {
-        document.getElementsByClassName("para title col guess").className = "bg" + cowardImage;
-        const container = document.getElementByClassName("container");
+        document.getElementById("body").className = "bg" + cowardImage;
+        const container = document.getElementByClassName("para");
         container.style.display = "none";
     }
 
