@@ -11,19 +11,27 @@
         <title>Ye Olde Word Gallows</title>
     </head>
 
-    <body id="body">
+    <body
+        id="body">
         <!-- <audio src="assets/crowd.mp3" type="audio/mpeg" autoplay="true" loop="true" id="crowd"></audio> -->
-        <main class="container">
+        <main
+            class="container">
 
             <!-- Title of the game -->
             <header id="title">Word Gallows</header>
 
             <!-- Guess countdown -->
             <div class="row">
+                <div class="col score">
+                    <p>Necks broken:</p>
+                    <p>Necks saved:</p>
+                </div>
+
                 <div class="col guess">
                     <p class="para">Guesses before</p>
                     <span id="name"></span>
                     <p class="para">is hanged by the neck:</p>
+                    <button class="button" type="button">Save thy neck</button>
                 </div>
 
                 <div class="row countdown"></div>
@@ -31,12 +39,9 @@
                     <p>Fallacious Calculations:</p>
                     <p class=""></p>
 
-                    <div class="row">
-
-                    </div>
+                    <div class="row"></div>
 
                 </div>
-                <div class="col score"></div>
             </div>
         </main>
 

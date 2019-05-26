@@ -15,32 +15,10 @@ html::before {
 
 body {
     /* Background image credit to Phil Strahl(https://www.flickr.com/photos/strahl/3845583592) */
-    background-image: url("../images/background1.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-}
-#body {
-    background-image: url("../images/knight.jpg");
-    background-size: contain;
-    background-repeat: repeat;
-}
-
-#title {
-    font-family: Old London;
-    font-size: 6em;
-    text-align: center;
-    color: #9b0f32;
-    font-style: oblique;
-    text-shadow: -3px 2px #010101;
-}
-
-.row {
-    float: left;
-    margin-left: 2vw;
-    margin-top: 0;
-}
-.guess {
     font-family: Old London;
     color: #e21d4e;
     font-weight: 50;
@@ -48,6 +26,30 @@ body {
     text-shadow: -3px 2px #010101;
     text-align: center;
     line-height: 1em;
+
+}
+
+.button {
+
+}
+
+#title {
+    font-family: Old London;
+    font-size: 2em;
+    text-align: center;
+    color: #9b0f32;
+    font-style: oblique;
+    text-shadow: -3px 2px #010101;
+    margin-top: 3vh;
+}
+
+.row {
+    /* float: right; */
+    margin-left: 2vw;
+    margin-top: 0;
+}
+.guess {
+    float: right;
 }
 
 #name {
@@ -60,10 +62,22 @@ body {
     font-style: oblique;
 }
 
+.countdown {
+    clear: both;
+    margin-top: 2vh;
+}
+
 p {
-    margin: 15px 0;
+    margin: 1.8vh 0;
 }
 
 .col {
-    margin: 25px;
+    margin: 2.9vh;
+    width: auto;
+}
+
+.score {
+    float: left;
+    left: 4vw;
+    width: auto;
 }
