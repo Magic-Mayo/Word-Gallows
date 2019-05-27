@@ -6,8 +6,6 @@ const words = [
     'crusade',
     'paladin',
     'squire',
-    'dark ages',
-    'Magna Carta',
     'executioner',
     'excommunication',
     'soothsayer',
@@ -17,7 +15,6 @@ const words = [
     'clergy',
     'fortress',
     'blacksmith',
-    'coat of arms',
     'cobbler',
     'constable',
     'parchment',
@@ -28,7 +25,7 @@ const words = [
     'guillotine'
 ]
 const wordChoice = words[Math.floor(Math.random() * words.length)];
-
+console.log(wordChoice)
 const userPress = document.getElementById("guess");
 document.onkeyup = function (event) {
     userPress.textContent = event.key;

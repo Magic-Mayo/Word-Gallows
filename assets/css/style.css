@@ -34,6 +34,7 @@ body {
 .button {
     font-family: Old London;
     padding: 1px;
+    font-size: .5em;
 }
 
 #title {
@@ -44,6 +45,8 @@ body {
     font-style: oblique;
     text-shadow: -3px 2px #010101;
     margin-top: 3vh;
+    flex-direction: row;
+    margin: 3vh auto 0;
 }
 
 .row {
@@ -93,16 +96,12 @@ p {
 }
 
 .calc {
-    position: relative;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
+    margin: 0 auto;
 }
 
 #calc {
-    position: absolute;
-    width: 50%;
-    left: 23vw;
     color: #9b0f32;
 }
 
@@ -118,4 +117,13 @@ p {
 #guess {
     position: absolute;
     bottom: -13vh;
+}
+
+.input {
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+#word {
+    overflow: 
 }

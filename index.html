@@ -14,7 +14,8 @@
     <body
         id="body">
         <!-- <audio src="assets/crowd.mp3" type="audio/mpeg" autoplay="true" loop="true" id="crowd"></audio> -->
-        <main class="container">
+        <main
+            class="container">
 
             <!-- Title of the game -->
             <header id="title">Word Gallows</header>
@@ -41,7 +42,14 @@
                     <button class="button" type="button">Reset</button>
                 </div>
             </div>
-                
+
+            <div class="row">
+                <div class="col input">
+                    <input class="userguess" maxlength="1" placeholder="Thine prediction" type="text"/>
+                    <button class="guessbtn" type="submit">Speculate</button>
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col calc">
                     <p id="calc">Fallacious Calculations:</p>
@@ -52,6 +60,6 @@
 
     </body>
 
-<script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
 </html>
