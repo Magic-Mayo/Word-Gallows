@@ -19,6 +19,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+.container {
     font-family: Old London;
     color: #e21d4e;
     font-weight: 50;
@@ -26,11 +29,11 @@ body {
     text-shadow: -3px 2px #010101;
     text-align: center;
     line-height: 1em;
-
 }
 
 .button {
-
+    font-family: Old London;
+    padding: 1px;
 }
 
 #title {
@@ -44,12 +47,16 @@ body {
 }
 
 .row {
-    /* float: right; */
+    display: flex;
+    width: 100%;
     margin-left: 2vw;
     margin-top: 0;
 }
+
 .guess {
+    flex-direction: row;
     float: right;
+    width: 25%;
 }
 
 #name {
@@ -73,11 +80,42 @@ p {
 
 .col {
     margin: 2.9vh;
-    width: auto;
+    width: 25%;
 }
 
 .score {
+    flex-direction: row;
     float: left;
-    left: 4vw;
-    width: auto;
+    left: 0;
+    margin-left: -1vw;
+    width: 25%;
+    text-align: left;
+}
+
+.calc {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#calc {
+    position: absolute;
+    width: 50%;
+    left: 23vw;
+    color: #9b0f32;
+}
+
+.word {
+    flex-direction: row;
+    clear: both;
+    width: 50%;
+    margin-right: 0;
+    margin-left: 0;
+    height: 50vh;
+}
+
+#guess {
+    position: absolute;
+    bottom: -13vh;
 }

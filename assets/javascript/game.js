@@ -1,34 +1,54 @@
-// const warn = confirm("Beware: Henceforth erroneous suppositions shall be tallied in regards to thy hanging by the neck.  Should thy tally reach five, you shall be hanged!  Doest thou wish to proceed?");
+// Words for computer to choose from for user to guess
+const words = [
+    'vassalage',
+    'gauntlet',
+    'jousting',
+    'crusade',
+    'paladin',
+    'squire',
+    'dark ages',
+    'Magna Carta',
+    'executioner',
+    'excommunication',
+    'soothsayer',
+    'harlot',
+    'chivalry',
+    'troubadour',
+    'clergy',
+    'fortress',
+    'blacksmith',
+    'coat of arms',
+    'cobbler',
+    'constable',
+    'parchment',
+    'rampart',
+    'quarrel',
+    'trebuchet',
+    'warhammer',
+    'guillotine'
+]
+const wordChoice = words[Math.floor(Math.random() * words.length)];
 
-// if (warn) {
-//     const name = prompt("T'is thy name?");
+const userPress = document.getElementById("guess");
+document.onkeyup = function (event) {
+    userPress.textContent = event.key;
+}
+// for (document.onkeyup in )
 
-//     // Function to add name to body of HTML after prompted
-//     function yourName() {
-//         const userName = document.getElementById("name");
-//         const writeName = document.createTextNode(name);
-//         userName.appendChild(writeName);
-//         console.log(writeName);
-//     }
+let wordChoiceLength = [];
+for (let i = 0; i < wordChoice.length; i++) {
+    wordChoiceLength[i] = '_';
+    document.getElementById('word').innerHTML = wordChoiceLength.join(' ');
+}
 
-//     // Executes yourName function after document is loaded
-//     window.addEventListener('DOMContentLoaded', yourName)
-// }
+const remLetter = wordChoice.length;
+document.addEventListener('keyup', guess)
 
-// // If user chooses not to play they will be given this message and forced to play with less chance to guess wrong
-// else if (!warn) {
-//     alert("Thou hast chosen to be but a coward.  For thine treachery, ye shall be given only three faulty predictions!");
-//     const coward = prompt("T'is thy name, coward?");
-
-//         // Function to add name to body of HTML after prompted
-//         function cowardName() {
-//             const cowardName = document.getElementById("name");
-//             const writeCoward = document.createTextNode(coward);
-//             cowardName.appendChild(writeCoward);
-//             console.log(writeCoward);
-//         }
-        
-//         // Executes coward function after document is loaded
-//         window.addEventListener('DOMContentLoaded', cowardName);
-// }
-
+function guess() {
+    for (let j = 0; j < wordChoice.length; j++) {
+        if (wordChoice[j] == document.onkeyup) {
+            wordChoiceLength[j] = document.onkeyup;
+            remLetter--;
+        }
+    }
+}
