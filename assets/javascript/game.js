@@ -27,25 +27,29 @@ const words = [
 const wordChoice = words[Math.floor(Math.random() * words.length)];
 console.log(wordChoice)
 const userPress = document.getElementById("guess");
-document.onkeyup = function (event) {
-    userPress.textContent = event.key;
-}
+// document.onkeyup = function (event) {
+//     userPress.textContent = event.key;
+// }
 // for (document.onkeyup in )
 
 let wordChoiceLength = [];
-for (let i = 0; i < wordChoice.length; i++) {
-    wordChoiceLength[i] = '_';
-    document.getElementById('word').innerHTML = wordChoiceLength.join(' ');
+function start(){
+    for (let i = 0; i < wordChoice.length; i++) {
+        wordChoiceLength[i] = '_';
+        document.getElementById('word').innerHTML = wordChoiceLength.join(' ');
+    }
 }
 
 const remLetter = wordChoice.length;
-document.addEventListener('keyup', guess)
+document.getElementById('guessbtn') = guessbtn;
+document.getElementById('userguess') = userguess;
 
 function guess() {
-    for (let j = 0; j < wordChoice.length; j++) {
-        if (wordChoice[j] == document.onkeyup) {
-            wordChoiceLength[j] = document.onkeyup;
-            remLetter--;
+    if (wordChoice[i] == userguess ) {
+        wordChoiceLength[j] = document.onkeyup;
+        remLetter --;
+        document.getElementById('word')
+
         }
     }
 }
