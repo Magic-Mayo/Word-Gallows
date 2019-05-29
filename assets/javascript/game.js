@@ -24,52 +24,87 @@ const words = [
     'warhammer',
     'guillotine'
 ]
-// const char = ['a', 'b', 'c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-const wordChoice = words[Math.floor(Math.random() * words.length)];
 
-console.log(wordChoice);
+// Random word choice
+
+// function randomWord(max) {
+//     return wordChoice;
+// }
+// console.log(words.length);
+
+
+// console.log(wordChoice);
 // const userPress = document.getElementById("guess");
-let wins = ['0'];
+let wordChoiceLength = [];
+
+let wins = [0];
 document.getElementById('saved').textContent = wins;
-let losses = ['0'];
+let losses = [0];
 document.getElementById('broken').textContent = losses;
 let guesses = [5];
 document.getElementById('turn').textContent = guesses;
 
+start();
+
 // Function to determine if a key event correctly identifies a letter in the randomly chosen word
 document.onkeyup = function (event) {
+    
+    // start();
+    
+    const wordChoice = words[Math.floor(Math.random() * words.length)];
     const letter = document.getElementById('word').textContent.split(' ');
     const charCode = event.which;
+    console.log(wordChoice)
     if ((charCode > 64 && charCode < 91)) {
-        guess : for (let i in wordChoice) {
+        for (let i = 0; i < wordChoice.length; i++) {
             if (event.key === wordChoice.charAt(i)) {
                 letter[i] = event.key;
                 document.getElementById('word').textContent = letter.join(' ');
-                break guess;
+                // console.log(document.getElementById('word').textContent.includes('_'))
+                if (!document.getElementById('word').textContent.includes('_')) {
+                    restart();
+                }
             }
+            // while (!document.getElementById('word').textContent.includes('_')) {
+            //     randomWord(23);
+            // }
         }
-        if (! wordChoice.includes(event.key)) {
+        while (! wordChoice.includes(event.key)) {
             document.getElementById('guess').textContent += event.key + ' ';
             guesses[0] = document.getElementById('turn').textContent -= 1;
-            if (document.getElementById('turn').textContent == 0) {
+            if (document.getElementById('turn').textContent === 0) {
                 const hang = new Audio('assets/trap door.mp3');
-                const neck = new Audio('assets/neck.mp3');
+                const bone = new Audio('assets/bone.mp3');
+                const scream = new Audio('assets/scream.mp3');
                 hang.play();
-                setTimeout(function () {neck.play();}, 500);
-                console.log(document.getElementById('turn'))
+                setTimeout(function () {bone.play();}, 700);
+                setTimeout(function () {scream.play();}, 800);
+                // scream.play();
+                console.log(document.getElementById('turn'));
+                document.getElementById('broken').textContent += 1;
+                restart();
             }
 
 
         }
-        console.log(event.which)
+        // console.log(event.which)
     }
 }
 
-let wordChoiceLength = [];
 function start() {
+    const wordChoice = words[Math.floor(Math.random() * words.length)];
     for (let i = 0; i < wordChoice.length; i++) {
         wordChoiceLength[i] = '_';
         document.getElementById('word').innerHTML = wordChoiceLength.join(' ');
+        
     }
 }
-start()
+
+function restart() {
+    const wordChoice = words[Math.floor(Math.random() * words.length)];
+    if (document.getElementById('word').textContent = wordChoice) {
+        start();
+        document.getElementById('turn').textContent = 5;
+        console.log(wordChoice);
+    }
+}
