@@ -28,13 +28,13 @@ const wordChoice = words[Math.floor(Math.random() * words.length)];
 console.log(wordChoice)
 const userPress = document.getElementById("guess");
 
-function userGuess(){
-    document.onkeyup = function (event) {
+document.onkeyup = function (event) {
     userPress.textContent = event.key;
+    if (event.key == guess()){
+
+        }
     }
-}
 // for (document.onkeyup in )
-userGuess()
 
 let wordChoiceLength = [];
 function start(){
@@ -46,20 +46,13 @@ function start(){
 
 start()
 
-const remLetter = wordChoice.length;
 // document.getElementById('guessbtn') = guessbtn;
 // document.getElementById('userguess') = userguess;
 
 function guess() {
-    for (i = 0; i < remLetter; i++) {
-
-    if (wordChoice[i] == userguess('string') ) {
-        wordChoiceLength[j] = document.onkeyup;
-        remLetter --;
-        document.getElementById('word')
-
+    for (i = 0; i < wordChoice.length; i++) {
+        wordChoice[i];
         }
     }
-    console.log()
-}
+
 guess()
