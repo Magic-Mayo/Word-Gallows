@@ -52,9 +52,9 @@ chooseWord = function () {
 // let wordChoiceLength = [];
 // const wordChoice = words[Math.floor(Math.random() * words.length)];
 
-let wins = [0];
+let wins = [null];
 document.getElementById('saved').textContent = wins;
-let losses = [0];
+let losses = [null];
 document.getElementById('broken').textContent = losses;
 let guesses = [5];
 document.getElementById('turn').textContent = guesses;
