@@ -15,20 +15,20 @@ if (warn) {
     window.addEventListener('DOMContentLoaded', userName)
 }
 
-// If user chooses not to play they will be given this message and forced to play with less chance to guess wrong
-else if (!warn) {
-    alert("Thou hast chosen to be but a coward.  For thine treachery, ye shall be given only three faulty predictions!");
-    const coward = prompt("T'is thy name, coward?");
+// // If user chooses not to play they will be given this message and forced to play with less chance to guess wrong
+// else if (!warn) {
+//     alert("Thou hast chosen to be but a coward.  For thine treachery, ye shall be given only three faulty predictions!");
+//     const coward = prompt("T'is thy name, coward?");
 
-        // Function to add name to body of HTML after prompted
-        function cowardName() {
-            const cowardName = document.getElementById("name");
-            const writeCoward = document.createTextNode(coward);
-            cowardName.appendChild(writeCoward);
-            console.log(writeCoward);
-        }
+//         // Function to add name to body of HTML after prompted
+//         function cowardName() {
+//             const cowardName = document.getElementById("name");
+//             const writeCoward = document.createTextNode(coward);
+//             cowardName.appendChild(writeCoward);
+//             console.log(writeCoward);
+//         }
         
-        // Executes coward function after document is loaded
-        window.addEventListener('DOMContentLoaded', cowardName);
-}
+//         // Executes coward function after document is loaded
+//         window.addEventListener('DOMContentLoaded', cowardName);
+// }
 
