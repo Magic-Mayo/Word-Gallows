@@ -97,7 +97,6 @@ function begin() {
                     crowd.pause()
                 }, 4781)
                 document.getElementById('saved').textContent = parseInt(document.getElementById('saved').textContent) + 1;
-
             }
 
             if (!document.getElementById('word').textContent.includes('_')) {
