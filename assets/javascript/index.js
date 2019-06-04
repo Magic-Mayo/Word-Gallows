@@ -8,6 +8,7 @@ if (warn) {
         const userName = document.getElementById("name");
         const writeName = document.createTextNode(name);
         userName.appendChild(writeName);
+        alert('Depress any key to start!');
         console.log(writeName);
     }
 
@@ -25,6 +26,7 @@ else if (!warn) {
             const cowardName = document.getElementById("name");
             const writeCoward = document.createTextNode(coward);
             cowardName.appendChild(writeCoward);
+            alert('Depress any key to start!');
             console.log(writeCoward);
         }
         
