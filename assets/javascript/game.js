@@ -81,10 +81,10 @@ function begin() {
                 hang.play();
                 setTimeout(function () {
                     bone.play();
-                }, 700);
+                }, 900);
                 setTimeout(function () {
                     scream.play();
-                }, 800);
+                }, 1050);
                 console.log(document.getElementById('turn'));
                 document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
             }
