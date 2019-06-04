@@ -37,8 +37,8 @@ chooseWord = function () {
     }
 
     document.getElementById('word').innerHTML = wordChoiceLength.join(' ');
-    console.log(wordChoiceLength);
-    console.log(wordChoice);
+    // console.log(wordChoiceLength);
+    // console.log(wordChoice);
 
 }
 
@@ -85,7 +85,6 @@ function begin() {
                 setTimeout(function () {
                     scream.play();
                 }, 1050);
-                console.log(document.getElementById('turn'));
                 document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
             }
 
@@ -108,7 +107,7 @@ function begin() {
                 gameOver();
                 begin();
             }
-            console.log(document.getElementById('word').textContent)
+            // console.log(document.getElementById('word').textContent)
         }
     }
 }
