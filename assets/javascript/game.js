@@ -91,8 +91,13 @@ function begin() {
 
             // Determines if a game is won and tallies the score in necks saved
             gameWin = function () {
+                const crowd = new Audio('assets/crowd.mp3');
+                crowd.play();
+                setTimeout(function(){
+                    crowd.pause()
+                }, 4781)
                 document.getElementById('saved').textContent = parseInt(document.getElementById('saved').textContent) + 1;
-                // begin();
+
             }
 
             if (!document.getElementById('word').textContent.includes('_')) {
