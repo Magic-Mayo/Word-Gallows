@@ -24,7 +24,25 @@ chooseWord = function () {
         'quarrel',
         'trebuchet',
         'warhammer',
-        'guillotine'
+        'guillotine',
+        'fief',
+        'knight',
+        'amercement',
+        'borough',
+        'guild',
+        'breastplate',
+        'chainmail',
+        'crossbow',
+        'javelin',
+        'longbow',
+        'morningstar',
+        'lance',
+        'ballista',
+        'petard',
+        'armiger',
+        'bastion',
+        'broadsword',
+        'fletchings',
     ];
     wordChoice = words[Math.floor(Math.random() * words.length)];
 
@@ -75,6 +93,7 @@ function begin() {
 
             // Determines if a game is lost and tallies the score in the necks broken column
             gameOver = function () {
+                // Audio from zapslap.com
                 const hang = new Audio('assets/trap door.mp3');
                 const bone = new Audio('assets/bone.mp3');
                 const scream = new Audio('assets/scream.mp3');
@@ -90,6 +109,7 @@ function begin() {
 
             // Determines if a game is won and tallies the score in necks saved
             gameWin = function () {
+                // Audio from zapslap.com
                 const crowd = new Audio('assets/crowd.mp3');
                 crowd.play();
                 setTimeout(function(){
