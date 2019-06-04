@@ -1,4 +1,4 @@
-// Words for computer to choose from randomly for user to guess
+// Words for computer to choose from randomly gsfor user to guess
 chooseWord = function () {
     let wordChoiceLength = [];
     words = [
@@ -71,40 +71,40 @@ function begin() {
             if (!wordChoice.includes(event.key)) {
                 document.getElementById('guess').textContent += event.key + ' ';
                 guesses[0] = document.getElementById('turn').textContent -= 1;
-
-                // Determines if a game is lost and tallies the score in the necks broken column
-                gameOver = function () {
-                    const hang = new Audio('assets/trap door.mp3');
-                    const bone = new Audio('assets/bone.mp3');
-                    const scream = new Audio('assets/scream.mp3');
-                    hang.play();
-                    setTimeout(function () {
-                        bone.play();
-                    }, 700);
-                    setTimeout(function () {
-                        scream.play();
-                    }, 800);
-                    console.log(document.getElementById('turn'));
-                    document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
-                }
-
-                // Determines if a game is won and tallies the score in necks saved 
-                gameWin = function(){
-                    document.getElementById('saved').textContent = parseInt(document.getElementById('saved').textContent) + 1;
-                    begin();
-                }
-
-                if (!document.getElementById('word').textContent.includes('_')) { 
-                    gameWin();
-                    begin();
-                }
-
-                if (document.getElementById('turn').textContent == 0) {
-                    gameOver();
-                    begin();
-                }
-                console.log(document.getElementById('word').textContent)
             }
+
+            // Determines if a game is lost and tallies the score in the necks broken column
+            gameOver = function () {
+                const hang = new Audio('assets/trap door.mp3');
+                const bone = new Audio('assets/bone.mp3');
+                const scream = new Audio('assets/scream.mp3');
+                hang.play();
+                setTimeout(function () {
+                    bone.play();
+                }, 700);
+                setTimeout(function () {
+                    scream.play();
+                }, 800);
+                console.log(document.getElementById('turn'));
+                document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
+            }
+
+            // Determines if a game is won and tallies the score in necks saved
+            gameWin = function () {
+                document.getElementById('saved').textContent = parseInt(document.getElementById('saved').textContent) + 1;
+                // begin();
+            }
+
+            if (!document.getElementById('word').textContent.includes('_')) {
+                gameWin();
+                begin();
+            }
+
+            if (document.getElementById('turn').textContent == 0) {
+                gameOver();
+                begin();
+            }
+            console.log(document.getElementById('word').textContent)
         }
     }
 }
