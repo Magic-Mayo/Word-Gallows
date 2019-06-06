@@ -6,7 +6,7 @@ if (warn) {
     // Function to add name to body of HTML after prompted
     function userName() {
         const writeName = document.getElementById('name').innerText;
-        if (name === ''){
+        if (name === '' || !name){
             document.getElementById('name').innerText = 'Deaf Mute';
         }
         else {
@@ -29,7 +29,7 @@ else if (!warn){
         function cowardName() {
             const writeCoward = document.getElementById('name').innerText;
             console.log(writeCoward);
-            if (coward === ''){
+            if (coward === '' || !coward){
                 console.log(writeCoward);
                 document.getElementById('name').innerText = 'Coward';
             }
