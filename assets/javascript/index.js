@@ -2,16 +2,20 @@ const warn = confirm("Beware: Henceforth erroneous suppositions shall be tallied
 
 if (warn) {
     const name = prompt("T'is thy name?");
-
+    
     // Function to add name to body of HTML after prompted
     function userName() {
-        const userName = document.getElementById("name");
-        const writeName = document.createTextNode(name);
-        userName.appendChild(writeName);
+        const writeName = document.getElementById('name').innerText;
+        if (name == undefined){
+            document.getElementById('name').innerText = 'Deaf Mute';
+        }
+        else {
+            document.getElementById('name').innerText = name;
+        }
         alert('Depress any key to start!');
         console.log(writeName);
     }
-
+    
     // Executes yourName function after document is loaded
     window.addEventListener('DOMContentLoaded', userName)
 }
@@ -23,13 +27,16 @@ else if (!warn) {
 
         // Function to add name to body of HTML after prompted
         function cowardName() {
-            const cowardName = document.getElementById("name");
-            const writeCoward = document.createTextNode(coward);
-            cowardName.appendChild(writeCoward);
-            alert('Depress any key to start!');
+            const writeCoward = document.getElementById('name').innerText;
             console.log(writeCoward);
-        }
-        
+            if (name == undefined){
+                document.getElementById('name').innerText = 'Deaf Mute';
+            }
+            else {
+                document.getElementById('name').innerText = coward;
+            }        
+            alert('Depress any key to start!');
         // Executes coward function after document is loaded
         window.addEventListener('DOMContentLoaded', cowardName);
+        }
 }
