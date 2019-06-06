@@ -6,7 +6,7 @@ if (warn) {
     // Function to add name to body of HTML after prompted
     function userName() {
         const writeName = document.getElementById('name').innerText;
-        if (name == undefined){
+        if (name === ''){
             document.getElementById('name').innerText = 'Deaf Mute';
         }
         else {
@@ -21,7 +21,7 @@ if (warn) {
 }
 
 // If user chooses not to play they will be given this message and forced to play with less chance to guess wrong
-else if (!warn) {
+else if (!warn){
     alert("Thou hast chosen to be but a coward.  For thine treachery, ye shall be play anyway!");
     const coward = prompt("T'is thy name, coward?");
 
@@ -29,14 +29,15 @@ else if (!warn) {
         function cowardName() {
             const writeCoward = document.getElementById('name').innerText;
             console.log(writeCoward);
-            if (name == undefined){
-                document.getElementById('name').innerText = 'Deaf Mute';
+            if (coward === ''){
+                console.log(writeCoward);
+                document.getElementById('name').innerText = 'Coward';
             }
             else {
                 document.getElementById('name').innerText = coward;
             }        
             alert('Depress any key to start!');
         // Executes coward function after document is loaded
-        window.addEventListener('DOMContentLoaded', cowardName);
-        }
+    }
+    window.addEventListener('DOMContentLoaded', cowardName);
 }
