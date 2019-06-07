@@ -64,6 +64,9 @@ body {
     flex-direction: row;
     float: right;
     width: 25%;
+    position: relative;
+    right: 3vw;
+    color: #9b0f32;
 }
 
 #name {
@@ -72,7 +75,6 @@ body {
     font-weight: 50;
     font-size: 1.8em;
     text-shadow: -3px 2px #010101;
-    text-align: center;
     font-style: oblique;
 }
 

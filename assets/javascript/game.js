@@ -103,10 +103,10 @@ function begin() {
                 hang.play();
                 setTimeout(function () {
                     bone.play();
-                }, 900);
+                }, 750);
                 setTimeout(function () {
                     scream.play();
-                }, 1050);
+                }, 900);
                 document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
             }
 
@@ -123,9 +123,9 @@ function begin() {
 
             if (!document.getElementById('word').textContent.includes('_')) {
                 gameWin();
-                setTimeout(function (){
+                setTimeout(function () {
                     begin();
-                }, 4781);
+                }, 4781)
             }
 
             if (document.getElementById('turn').textContent == 0) {
