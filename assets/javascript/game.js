@@ -71,7 +71,7 @@ document.getElementById('turn').textContent = guesses;
 function begin() {
     chooseWord();
     document.onkeyup = function (event) {
-
+        console.log(event)
         const letter = document.getElementById('word').textContent.split(' ');
         const charCode = event.which;
 
@@ -86,9 +86,12 @@ function begin() {
                 }
             }
 
-            if (!wordChoice.includes(event.key)) {
+            wrongGuess = document.getElementById('guess').innerText
+
+            if (!wordChoice.includes(event.key) && !wrongGuess.includes(event.key)) {
                 document.getElementById('guess').textContent += event.key + ' ';
                 guesses[0] = document.getElementById('turn').textContent -= 1;
+                console.log('hi')
             }
 
             // Determines if a game is lost and tallies the score in the necks broken column
@@ -113,14 +116,16 @@ function begin() {
                 const crowd = new Audio('assets/crowd.mp3');
                 crowd.play();
                 setTimeout(function(){
-                    crowd.pause()
-                }, 4781)
+                    crowd.pause();
+                }, 4781);
                 document.getElementById('saved').textContent = parseInt(document.getElementById('saved').textContent) + 1;
             }
 
             if (!document.getElementById('word').textContent.includes('_')) {
                 gameWin();
-                begin();
+                setTimeout(function (){
+                    begin();
+                }, 4781);
             }
 
             if (document.getElementById('turn').textContent == 0) {
