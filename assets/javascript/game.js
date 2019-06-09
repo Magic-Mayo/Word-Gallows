@@ -102,11 +102,11 @@ function begin() {
                 const scream = new Audio('assets/scream.mp3');
                 hang.play();
                 setTimeout(function () {
-                    bone.play();
-                }, 750);
-                setTimeout(function () {
                     scream.play();
-                }, 900);
+                }, 700);
+                setTimeout(function () {
+                    bone.play();
+                }, 850);
                 document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
             }
 
