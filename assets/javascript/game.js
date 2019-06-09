@@ -103,10 +103,10 @@ function begin() {
                 hang.play();
                 setTimeout(function () {
                     scream.play();
-                }, 700);
+                }, 600);
                 setTimeout(function () {
                     bone.play();
-                }, 850);
+                }, 875);
                 document.getElementById('broken').textContent = parseInt(document.getElementById('broken').textContent) + 1;
             }
 
