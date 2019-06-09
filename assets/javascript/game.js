@@ -55,9 +55,6 @@ chooseWord = function () {
     }
 
     document.getElementById('word').innerHTML = wordChoiceLength.join(' ');
-    // console.log(wordChoiceLength);
-    // console.log(wordChoice);
-
 }
 
 let wins = [0];
@@ -77,8 +74,8 @@ function begin() {
 
         if ((charCode > 64 && charCode < 91)) {
             for (let i = 0; i < wordChoice.length; i++) {
-                if (event.key === wordChoice.charAt(i)) {
-                    letter[i] = event.key;
+                if (event.key.toLowerCase() === wordChoice.charAt(i)) {
+                    letter[i] = event.key.toLowerCase();
                     document.getElementById('word').textContent = letter.join(' ');
                     if (!document.getElementById('word').textContent.includes('_')) {
                         chooseWord;
@@ -88,10 +85,9 @@ function begin() {
 
             wrongGuess = document.getElementById('guess').innerText
 
-            if (!wordChoice.includes(event.key) && !wrongGuess.includes(event.key)) {
-                document.getElementById('guess').textContent += event.key + ' ';
+            if (!wordChoice.includes(event.key.toLowerCase()) && !wrongGuess.includes(event.key.toLowerCase())) {
+                document.getElementById('guess').textContent += event.key.toLowerCase() + ' ';
                 guesses[0] = document.getElementById('turn').textContent -= 1;
-                console.log('hi')
             }
 
             // Determines if a game is lost and tallies the score in the necks broken column
