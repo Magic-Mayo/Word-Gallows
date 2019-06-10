@@ -12,7 +12,7 @@ if (warn) {
         else {
             document.getElementById('name').innerText = name;
         }
-        alert('Depress any key to start!');
+        alert('Depress an alpahbetic key to progress through the game!');
         console.log(writeName);
     }
     
@@ -36,7 +36,7 @@ else if (!warn){
             else {
                 document.getElementById('name').innerText = coward;
             }        
-            alert('Depress any key to start!');
+            alert('Depress an alpahbetic key to progress through the game!');
         // Executes coward function after document is loaded
     }
     window.addEventListener('DOMContentLoaded', cowardName);
