@@ -17,5 +17,5 @@ and the user will try to guess a new word.  Each win tallies in the necks saved 
 broken section on the screen.
 
 ## Help and Issues
-If you notice something that needs work or find a bug while playing please submit an issue via it's repo on 
+If you notice something that needs work or find a bug while playing please submit an issue via the issues page on 
 [Github](https://github.com/Magic-Mayo/Word-Guess-Game/issues).
