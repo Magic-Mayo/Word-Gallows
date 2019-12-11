@@ -2,6 +2,8 @@
 This is just your basic Hangman game with a medieval flare.  The game was intentionally made to be somewhat difficult.
 Be warned: It was created with a bit of dark humor.
 
+![Screenshot](/assets/images/demo.png)
+
 ## How to properly use the game
 You enter the page with an alert to warn you about the game and your desire to continue.  If you choose to continue you will
 be prompted for your name and subsequently alerted to press a key to start.  If you choose cancel you will be alerted that 
