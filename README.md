@@ -1,4 +1,4 @@
-# Word Gallows
+# [Word Gallows](Magic-Mayo.github.io/Word-Gallows)
 This is just your basic Hangman game with a medieval flare.  The game was intentionally made to be somewhat difficult.
 Be warned: It was created with a bit of dark humor.
 
